@@ -1,7 +1,7 @@
 const mongoose=require("mongoose");
 
 const accessSchema=new mongoose.Schema({
-    username:{
+    name:{
         type:String,
         required:[true,"Please add the name Field"]
     },
@@ -13,6 +13,8 @@ const accessSchema=new mongoose.Schema({
         type:String,
         required:[true,"Please add the password Field"]
     }
+},{
+    timestamps:true
 })
 
 module.exports=mongoose.model("accessusers",accessSchema)
